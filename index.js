@@ -29,13 +29,14 @@ client.on('ready', () => {
     const date = new Date()
     const hour = date.getHours()
     const minute = date.getMinutes()
-    if (hour === minute) {
+    if (minute % 2 == 0) {
+      // if (hour === minute) {
       if (sendMessage) {
         try {
           const message = `${hour}${minute}`
           await client.sendMessage(waNumber, message)
           console.log(
-            `Sent message ${message} to number ${number} at ${date.toLocaleDateString()}`
+            `Sent message ${message} to number ${number} at ${date.toLocaleTimeString()}`
           )
         } catch (e) {
           console.error('Failed to send message', e)
