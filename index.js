@@ -9,6 +9,9 @@ const toWaNumber = (numStr) => `972${numStr.substring(1)}@c.us`
 
 const client = new Client({
   authStrategy: new LocalAuth(),
+  puppeteer: {
+    hea,
+  },
 })
 
 const number = `${argv.number}`
@@ -33,7 +36,7 @@ client.on('ready', () => {
       // if (hour === minute) {
       if (sendMessage) {
         try {
-          const message = `${hour}${minute}`
+          const message = `${hour}${hour}`
           await client.sendMessage(waNumber, message)
           console.log(
             `Sent message ${message} to number ${number} at ${date.toLocaleTimeString()}`
