@@ -9,9 +9,6 @@ const toWaNumber = (numStr) => `972${numStr.substring(1)}@c.us`
 
 const client = new Client({
   authStrategy: new LocalAuth(),
-  puppeteer: {
-    hea,
-  },
 })
 
 const number = `${argv.number}`
