@@ -32,8 +32,8 @@ client.on('ready', () => {
     const date = new Date()
     const hour = date.getHours()
     const minute = date.getMinutes()
-    if (minute % 2 == 0) {
-      // if (hour === minute) {
+    // if (minute % 2 == 0) {
+    if (hour === minute) {
       if (sendMessage) {
         try {
           const message = `${hour}${hour}`
